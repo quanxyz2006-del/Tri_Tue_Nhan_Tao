@@ -147,4 +147,4 @@ ZIP trong `dist/` chỉ gồm mã cần thiết, dữ liệu chọn lọc, giấ
 | [train_basic.py](train_basic.py) | Thí nghiệm huấn luyện câu ngắn |
 | [tests/](tests/) | Kiểm thử hồi quy và bản phân phối |
 
-Kho Git lưu mã nguồn, dữ liệu chọn lọc, thông tin ghi công và checkpoint thí nghiệm. Môi trường ảo, cache, ZIP tạo lại được và checkpoint thử cũ được loại khỏi Git bằng [.gitignore](.gitignore).
+
