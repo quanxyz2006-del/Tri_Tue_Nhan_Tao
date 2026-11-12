@@ -1,0 +1,51 @@
+# Handwritten demonstration corpus, NOT the Tatoeba benchmark.
+Hello.	Xin chào.
+Good morning.	Chào buổi sáng.
+Good night.	Chúc ngủ ngon.
+Thank you.	Cảm ơn bạn.
+You are welcome.	Không có gì.
+How are you?	Bạn khỏe không?
+I am fine.	Tôi khỏe.
+What is your name?	Bạn tên là gì?
+My name is Nam.	Tôi tên là Nam.
+I am a student.	Tôi là sinh viên.
+She is a teacher.	Cô ấy là giáo viên.
+He is a doctor.	Anh ấy là bác sĩ.
+I love you.	Tôi yêu bạn.
+I like reading books.	Tôi thích đọc sách.
+She reads a book.	Cô ấy đọc một cuốn sách.
+He drinks water.	Anh ấy uống nước.
+I drink coffee.	Tôi uống cà phê.
+We eat rice.	Chúng tôi ăn cơm.
+The food is good.	Đồ ăn ngon.
+I am hungry.	Tôi đói.
+I am tired.	Tôi mệt.
+It is raining.	Trời đang mưa.
+The sun is shining.	Mặt trời đang chiếu sáng.
+It is cold today.	Hôm nay trời lạnh.
+It is hot today.	Hôm nay trời nóng.
+Where do you live?	Bạn sống ở đâu?
+I live in Hanoi.	Tôi sống ở Hà Nội.
+I go to school.	Tôi đi học.
+She goes to work.	Cô ấy đi làm.
+He went to the bank to deposit money.	Anh ấy đến ngân hàng để gửi tiền.
+He sat on the bank of the river.	Anh ấy ngồi trên bờ sông.
+The bank is closed.	Ngân hàng đã đóng cửa.
+The river is wide.	Con sông rộng.
+Turn right.	Rẽ phải.
+You are right.	Bạn đúng.
+Birds can fly.	Chim có thể bay.
+There is a fly on the table.	Có một con ruồi trên bàn.
+Open the door.	Mở cửa ra.
+Close the window.	Đóng cửa sổ lại.
+Please help me.	Làm ơn giúp tôi.
+I do not understand.	Tôi không hiểu.
+Please speak slowly.	Làm ơn nói chậm.
+What time is it?	Bây giờ là mấy giờ?
+See you tomorrow.	Hẹn gặp bạn ngày mai.
+This is my house.	Đây là nhà của tôi.
+The car is red.	Chiếc xe màu đỏ.
+I have two brothers.	Tôi có hai anh em trai.
+She likes music.	Cô ấy thích âm nhạc.
+We are friends.	Chúng tôi là bạn.
+Have a nice day.	Chúc bạn một ngày tốt lành.

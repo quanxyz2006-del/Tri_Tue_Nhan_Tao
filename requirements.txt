@@ -1,0 +1,4 @@
+torch>=2.6,<3
+customtkinter>=5.2.2,<6
+matplotlib>=3.9,<4
+nltk>=3.9,<4

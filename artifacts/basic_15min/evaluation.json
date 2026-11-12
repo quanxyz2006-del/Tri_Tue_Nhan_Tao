@@ -1,0 +1,73 @@
+{
+  "bleu": {
+    "BLEU-1": 37.98896827843723,
+    "BLEU-2": 21.237601268178643,
+    "BLEU-3": 12.514189878129093,
+    "BLEU-4": 7.73584062896262
+  },
+  "seconds": 724.9467243999998,
+  "epochs": 86,
+  "samples": [
+    {
+      "english": "tom is still in boston .",
+      "reference": "tom vẫn ở boston",
+      "prediction": "tom là người đang nói dối mary ."
+    },
+    {
+      "english": "my mother told me to behave myself .",
+      "reference": "mẹ nhắc nhở tôi phải cư xử cho đúng mực .",
+      "prediction": "mẹ tôi đã mất tôi theo địa ."
+    },
+    {
+      "english": "my mother told me to behave myself .",
+      "reference": "mẹ bảo tôi phải cư xử cho đúng .",
+      "prediction": "mẹ tôi đã mất tôi theo địa ."
+    },
+    {
+      "english": "what has happened to tom ?",
+      "reference": "cái gì đã xảy đến với tom ?",
+      "prediction": "điều gì đã xảy ra với tom có thể nói chuyện với ai ?"
+    },
+    {
+      "english": "tom gave mary a christmas present .",
+      "reference": "tom tặng mary một món quà giáng sinh .",
+      "prediction": "tom đã từng cố gắng giết mary ."
+    },
+    {
+      "english": "i ' ve got nothing to say to tom .",
+      "reference": "tôi không có gì để nói với tom cả .",
+      "prediction": "tôi không thể đoán được chuyện gì cả tom ."
+    },
+    {
+      "english": "the king was executed .",
+      "reference": "nhà vua đã bị xử tử .",
+      "prediction": "con gà đang tăng ."
+    },
+    {
+      "english": "obviously , he is lying .",
+      "reference": "rõ ràng ông ta đang nói dối .",
+      "prediction": "nó là người canada ."
+    },
+    {
+      "english": "obviously , he is lying .",
+      "reference": "anh ta rõ ràng là đang nói dối .",
+      "prediction": "nó là người canada ."
+    },
+    {
+      "english": "obviously , he is lying .",
+      "reference": "rõ ràng là ông ta đang nói dối .",
+      "prediction": "nó là người canada ."
+    },
+    {
+      "english": "obviously , he is lying .",
+      "reference": "anh ta rõ ràng đang nói dối .",
+      "prediction": "nó là người canada ."
+    },
+    {
+      "english": "i hope they make it .",
+      "reference": "tôi hy vọng họ làm được .",
+      "prediction": "tôi nghĩ là tôi có thể làm điều đó ."
+    }
+  ],
+  "checkpoint_verified": true
+}
