@@ -1,6 +1,29 @@
 ﻿# Dịch Anh–Việt bằng biLSTM
 
-Ứng dụng đề tài 23: biLSTM Encoder → Linear + tanh → LSTM Decoder, dùng PyTorch và CustomTkinter. Bản chia sẻ có sẵn checkpoint và tự nạp khi mở, không cần huấn luyện lại để dịch.
+Mã nguồn thực nghiệm cho **Đề tài 23: Nghiên cứu mạng biLSTM trong mạng nơ-ron hồi quy và cài đặt thử nghiệm mã hóa–giải mã (Encoder–Decoder) văn bản tiếng Anh**. Bài toán triển khai là dịch máy Anh → Việt.
+
+Kiến trúc: **biLSTM Encoder → Linear + tanh → LSTM Decoder**, sử dụng PyTorch và CustomTkinter. Kho mã nguồn kèm checkpoint đã huấn luyện; ứng dụng tự nạp mô hình khi mở, không cần huấn luyện lại để thử nghiệm dịch.
+
+Tài liệu này hướng dẫn cài đặt, sử dụng và kiểm chứng kết quả chương trình. Phần cơ sở lý thuyết và phân tích chi tiết thuộc báo cáo học phần.
+
+## Chức năng chính
+
+- Nhập câu tiếng Anh và hiển thị bản dịch tiếng Việt.
+- Hiển thị tokens, IDs, kích thước tensor và xác suất từng bước giải mã.
+- Huấn luyện với tham số tùy chỉnh, theo dõi loss và accuracy.
+- Lưu/nạp checkpoint và hủy tác vụ đang chạy.
+- Chạy thực nghiệm LSTM/biLSTM và hiển thị BLEU.
+
+## Tải mã nguồn
+
+Trên GitHub chọn **Code → Download ZIP** và giải nén toàn bộ. Hoặc dùng Git:
+
+```sh
+git clone https://github.com/quanxyz2006-del/Tri_Tue_Nhan_Tao.git
+cd Tri_Tue_Nhan_Tao
+```
+
+Các bước bên dưới tạo môi trường riêng trên máy sử dụng; không cần sao chép môi trường ảo của máy phát triển.
 
 ## Chạy nhanh trên Windows
 
@@ -30,7 +53,7 @@ macOS có thể dùng bộ cài Python từ python.org có Tcl/Tk. Linux cần d
 
 ## Checkpoint có sẵn
 
-Lần huấn luyện cuối cùng ngày 12/11/2026: 6.391 cặp train, 806 validation, 802 test;
+Thí nghiệm của checkpoint đi kèm ngày 12/11/2026: 6.391 cặp train, 806 validation, 802 test;
 86 epoch trong 724,95 giây, khôi phục epoch 7 (validation loss 3,2238).
 BLEU-1/2/3/4 trên test lần lượt **37,99 / 21,24 / 12,51 / 7,74** (thang 0–100).
 Các ví dụ kiểm thử còn sai nghĩa đáng kể; kết quả này chưa chứng minh chất lượng
@@ -99,11 +122,29 @@ Khôi phục epoch có validation loss tốt nhất trước khi đánh giá tes
 
 ## Kiểm thử và đóng gói
 
+Kết quả đã ghi nhận: **9/9 kiểm thử đạt** trên môi trường phát triển, gồm giải nén ZIP sang đường dẫn khác, tự nạp checkpoint và dịch. Đây không phải xác nhận đã chạy trên máy vật lý khác. Kiểm thử bản phân phối được bỏ qua nếu chưa tạo ZIP; để kiểm tra đầy đủ, chạy theo thứ tự:
+
 ```powershell
-.\.venv-run\Scripts\python.exe -m unittest discover -s tests -v
 .\.venv-run\Scripts\python.exe package_project.py
+.\.venv-run\Scripts\python.exe -m unittest discover -s tests -v
 ```
 
 Kiểm thử GUI cần desktop. [src/](src/) chứa xử lý dữ liệu và mô hình; [app_gui.py](app_gui.py) quản lý giao diện và worker; [main.py](main.py) hỗ trợ CLI; [tests/](tests/) chứa kiểm thử hồi quy.
 
 ZIP trong `dist/` chỉ gồm mã cần thiết, dữ liệu chọn lọc, giấy phép, hướng dẫn, kiểm thử và checkpoint mới. Không chứa môi trường ảo, cache hoặc checkpoint thử cũ.
+
+## Cấu trúc mã nguồn
+
+| Thành phần | Vai trò |
+| --- | --- |
+| [src/data_processor.py](src/data_processor.py) | Chuẩn hóa, từ điển, chia tập và padding |
+| [src/encoder.py](src/encoder.py) | Encoder LSTM/biLSTM và chuyển tiếp trạng thái |
+| [src/decoder.py](src/decoder.py) | Decoder LSTM một chiều |
+| [src/seq2seq_model.py](src/seq2seq_model.py) | Ghép mô hình và greedy decoding |
+| [src/trainer.py](src/trainer.py) | Huấn luyện, BLEU, ablation và checkpoint |
+| [app_gui.py](app_gui.py) | Giao diện và xử lý tác vụ nền |
+| [run.py](run.py) | Chuẩn bị môi trường và khởi chạy |
+| [train_basic.py](train_basic.py) | Thí nghiệm huấn luyện câu ngắn |
+| [tests/](tests/) | Kiểm thử hồi quy và bản phân phối |
+
+Kho Git lưu mã nguồn, dữ liệu chọn lọc, thông tin ghi công và checkpoint thí nghiệm. Môi trường ảo, cache, ZIP tạo lại được và checkpoint thử cũ được loại khỏi Git bằng [.gitignore](.gitignore).
